@@ -1,5 +1,6 @@
 package day2
 
+import shared.loadPuzzleInput
 import java.io.File
 
 private const val filename = "src/main/kotlin/day2/input.txt"
@@ -12,12 +13,8 @@ fun main(args: Array<String>) {
         if (it.passwordValidPart2(regexPattern)) validCount++
     }
     println(validCount)
-    
 
-}
 
-fun loadPuzzleInput(fileName: String): List<String> {
-    return File(fileName).readLines(Charsets.UTF_8)
 }
 
 fun String.passwordValidPart1(regex: Regex): Boolean {
